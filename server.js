@@ -31,5 +31,5 @@ app.get('/', async (request, response) => {
 })
 
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`SERVER RUNNING ON PORT 8000`)
+    console.log(`SERVER RUNNING ON PORT 8000!`) 
 })
