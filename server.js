@@ -6,5 +6,12 @@ require('dontenv').config()
 
 let db,
     dbConnectonString = process.env.DB_STRING,
-    dbName = '',
-    collection
+    dbName = 'sample',
+    collection = 'test'
+
+MongoClient.connect(dbConnectonString)
+    .then(client => {
+        console.log ('YOU ARE NOW CONNECTED TO THE DATABASE.')
+        db = client.db(dbName)
+        collection = db.collection('test')
+    })
